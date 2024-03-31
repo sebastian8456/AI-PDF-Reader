@@ -51,7 +51,7 @@ if __name__ == "__main__":
             mp3_bytes = response['AudioStream'].read()
             bin_f.write(mp3_bytes)
             bin_f.close()
-            # TODO: Read the mp3 bytes aloud
+            # TODO: fix the program to work for larger pdf files.
             y, sr = librosa.load('pdf_text.mp3')
             create_audio_display(y, sr, text=sys.argv[1])
             client.close()
